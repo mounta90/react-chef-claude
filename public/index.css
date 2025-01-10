@@ -26,7 +26,7 @@ main {
   flex-direction: column;
   gap: 16px;
 
-  padding: 32px max(64px, 25%);
+  padding: 32px max(96px, 20%);
 }
 
 main > form {
@@ -57,6 +57,40 @@ main > form > button {
   font-family: Inter, sans-serif;
 }
 
+main > form > button:hover {
+  background-color: rgba(0, 0, 0, 0.6);
+  cursor: pointer;
+}
+
 main > .ingredients-section > ul {
   list-style-position: inside;
+}
+
+main > .get-recipe-section {
+  padding: 24px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  background-color: rgb(211, 211, 211);
+  border-radius: 8px;
+}
+
+main > .get-recipe-section > p {
+  font-weight: bold;
+}
+
+main > .get-recipe-section > button {
+  padding: 8px;
+  background-color: rgb(248, 131, 121);
+  border: none;
+  box-shadow: 0px 0px 16px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+
+main > .get-recipe-section > button:hover {
+  background-color: rgba(248, 131, 121, 0.7);
+  cursor: pointer;
 }

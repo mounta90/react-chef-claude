@@ -1,6 +1,7 @@
-// left off at 7:47:49
+// left off at 8:09:36
 
 import { useState } from "react";
+import Recipe from "./recipe";
 
 export default function Main() {
   const [ingredients, setIngredients] = useState([]);
@@ -11,6 +12,14 @@ export default function Main() {
     const newIngredient = formData.get("ingredient");
 
     setIngredients((prevIngredients) => [...prevIngredients, newIngredient]);
+  }
+
+  // ---
+
+  const [isRecipeShown, setIsRecipeShown] = useState(false);
+
+  function onGetRecipe() {
+    setIsRecipeShown((prev) => !prev);
   }
 
   return (
@@ -25,9 +34,19 @@ export default function Main() {
         />
         <button className="input-element">Add Ingredient</button>
       </form>
-      <section className="ingredients-section">
-        <ul>{ingredientsList}</ul>
-      </section>
+      {ingredients.length > 0 ? (
+        <section className="ingredients-section">
+          <h2>Current Ingredients</h2>
+          <ul>{ingredientsList}</ul>
+        </section>
+      ) : null}
+      {ingredients.length > 3 ? (
+        <section className="get-recipe-section">
+          <p>Ready for a recipe?</p>
+          <button onClick={onGetRecipe}>Get Recipe</button>
+        </section>
+      ) : null}
+      {isRecipeShown ? <Recipe /> : null}
     </main>
   );
 }
