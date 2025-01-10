@@ -1,0 +1,62 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Inter, sans-serif;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+
+  padding: 16px;
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.1),
+    0px 1px 2px 0px rgba(0, 0, 0, 0.1);
+}
+
+header > img {
+  width: 48px;
+}
+
+/* --- */
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  padding: 32px max(64px, 25%);
+}
+
+main > form {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+main > form > .input-element {
+  padding: 8px;
+  border-radius: 4px;
+  border-color: black;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+main > form > input {
+  flex-grow: 2;
+
+  font-family: Inter, sans-serif;
+}
+
+main > form > button {
+  flex-grow: 1;
+
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+
+  font-family: Inter, sans-serif;
+}
+
+main > .ingredients-section > ul {
+  list-style-position: inside;
+}
