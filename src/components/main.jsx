@@ -5,7 +5,12 @@ import Recipe from "./recipe";
 import Ingredients from "./ingredients";
 
 export default function Main() {
-  const [ingredients, setIngredients] = useState([]);
+  const [ingredients, setIngredients] = useState([
+    "Oregano",
+    "Pasta",
+    "Tomato Sauce",
+    "Main Spices",
+  ]);
 
   function onFormSubmitted(formData) {
     const newIngredient = formData.get("ingredient");

@@ -1,16 +1,15 @@
 export default function Recipe() {
   return (
-    <section>
-      <h2>Chef Claude Recommends:</h2>
-      <article className="suggested-recipe-container" aria-live="polite">
-        <p>
+    <section id="recipe-section">
+      <article id="recipe-container">
+        <p id="suggestion">
           Based on the ingredients you have available, I would recommend making
           a simple a delicious <strong>Beef Bolognese Pasta</strong>. Here is
           the recipe:
         </p>
-        <h3>Beef Bolognese Pasta</h3>
+        <h3 id="recipe-name">Beef Bolognese Pasta</h3>
         <strong>Ingredients:</strong>
-        <ul>
+        <ul id="recipe-ingredients">
           <li>1 lb. ground beef</li>
           <li>1 onion, diced</li>
           <li>3 cloves garlic, minced</li>
@@ -25,7 +24,7 @@ export default function Recipe() {
           </li>
         </ul>
         <strong>Instructions:</strong>
-        <ol>
+        <ol id="recipe-instructions">
           <li>Bring a large pot of salted water to a boil for the pasta.</li>
           <li>
             In a large skillet or Dutch oven, cook the ground beef over
